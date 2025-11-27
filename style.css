@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+    --fundo-principal: #B0D3E9;
+    --fundo-claro: #EDEDE2;
+    --cor-título: #10326F;
+    --cor-link: #3399BD;
+    --font-título: "Playfair Display", serif;
+    --font-links: "Roboto Slab", serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+div#container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+div.logo > img{
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    
+}
+
+div#container > nav > ul {
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+div#container ul > li {
+    display: inline-block;
+    margin: 40px 40px;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: var(--font-links);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: var(--fundo-claro);
+    transition: 0.8s;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 1px 1px 20px var(--cor-link);
+}
+
+section#banner {
+    height: 100vh;
+    background-image: url(imagens/wolf-sobre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+section#banner > h1 {
+    font-family: var(--font-links);
+    font-size: 8em;
+    color: var(--fundo-claro);
+    grid-area: 3 / 2;
+    align-content: end;
+}
+
+section#banner > h2 {
+    font-family: var(--font-links);
+    font-size: 1.5em;
+    color: var(--fundo-claro);
+
+     grid-area: 4 / 2;
+    text-align: end;
+    margin-right: 50%;
+    margin-bottom: 50%;
+}
+
+section#banner > div.menu {
+    grid-area: 3/ 4;
+    justify-items: right;
+    margin-right: 100px;
+    text-align: right;
+    
+}
+
+div.menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+div.menu a{
+    text-decoration: none;
+    font-family: var(--font-título);
+    color: var(--fundo-principal);
+    font-size: 2em;
+    transition-duration: 0.5s;
+}
+
+div.menu a:hover {
+    margin: 20px;
+    color: aliceblue;
+    text-shadow: 8px 3px 10px white;
+}
+
+.barra {
+    width: auto;
+    height: 40px;
+    background-color: var(--fundo-principal);
+}
+
+main {
+    height: 100vh;
+}
