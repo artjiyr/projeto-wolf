@@ -2,13 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --fundo-principal: #B0D3E9;
     --fundo-claro: #EDEDE2;
     --cor-título: #10326F;
     --cor-link: #3399BD;
     --font-título: "Playfair Display", serif;
+    --font-subtítulo: "Poppins", sans-serif;
     --font-links: "Roboto Slab", serif;
+    --font-texto:  "Nunito", sans-serif;
 }
 
 *{
@@ -23,31 +29,56 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    transition: 0.5s;
+}
+
+header.rolagem {
+    background-image: linear-gradient(to left, var(--fundo-principal), var(--cor-link));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding: 5px 0px;
+    width: 100%;
+    header: 10%;
+}
+
+header.rolagem div#container > div.logo{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+}
+
+header.rolagem div#container > nav {
+    display: none;
 }
 
 div#container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    
 }
 
 div.logo > img{
-    width: 300px;
-    margin-top: 20px;
-    margin-left: 30px;
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 4%;
     margin-bottom: 0px;
     cursor: pointer;
-    
+    transition: 0.8s;
+}
+
+header.rolagem div.logo > img {
+    width: 30%;
+    margin: auto;
+    cursor: pointer;
 }
 
 div#container > nav > ul {
     list-style-type: none;
-    margin-right: 50px;
 }
 
 div#container ul > li {
     display: inline-block;
-    margin: 40px 40px;
+    margin: 10% 20px;
 }
 
 nav a{
@@ -70,6 +101,7 @@ section#banner {
     background-image: url(imagens/wolf-sobre.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: auto;
     height: 100vh;
 
@@ -80,7 +112,7 @@ section#banner {
 
 section#banner > h1 {
     font-family: var(--font-links);
-    font-size: 8em;
+    font-size: 5em;
     color: var(--fundo-claro);
     grid-area: 3 / 2;
     align-content: end;
@@ -134,4 +166,56 @@ div.menu a:hover {
 
 main {
     height: 100vh;
+}
+
+section.historia {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div.text-historia {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--fundo-claro);
+    margin: 2%;
+    border-radius: 20px;
+    box-shadow: 0px 5px 12px 4px rgba(0, 0, 0, 0.372);
+}
+
+section.historia > h1{
+    font-family: var(--font-subtítulo);
+    color: var(--cor-título);
+    font-size: 3em;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.315);
+    justify-container: right;
+    transition: .5s;
+}
+
+section.historia p{
+    font-family: var(--font-texto);
+    color: var(--cor-título);
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+section.historia div.imagem {
+    padding: 20px;
+}
+
+section.historia div.imagem img {
+    border-radius: 20px;
+    margin-left: 20px ;
+    box-shadow: 0px 5px 12px 4px rgba(0, 0, 0, 0.372);
+}
+
+section#parallax {
+    background-color: grey;
+    background-image: url(imagens/Wolf\ __\ Witch\ Watch.jpg);
+}
+
+section.parallax {
+    
 }
