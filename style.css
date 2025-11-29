@@ -30,6 +30,7 @@ header{
     top: 0;
     left: 0;
     transition: 0.8s;
+    z-index: 1;
 }
 
 header.rolagem {
@@ -158,10 +159,31 @@ div.menu a:hover {
     text-shadow: 8px 3px 10px white;
 }
 
-.barra {
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#logos {
+    overflow: hidden;
     width: auto;
-    height: 40px;
-    background-color: var(--fundo-principal);
+    height: 162px;
+    background-color: var(--cor-título);
+}
+
+.logos-slide {
+    white-space: nowrap;
+    animation: 10s slide infinite linear;
+}
+
+.logos-slide img{
+    height: 150px;
+    margin: 0px 40px;
+    padding-top: 20px;
 }
 
 main {
@@ -169,6 +191,10 @@ main {
 }
 
 section.historia {
+    background-image: url(imagens/background-historia.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
     display: flex;
     flex-flow: row wrap;
 }
@@ -176,7 +202,10 @@ section.historia {
 div.text-historia {
     display: flex;
     flex-flow: column wrap;
-    background-color: var(--fundo-claro);
+    background-color: rgba(255, 255, 255, 0.4);
+    border:  1px solid white;
+    backdrop-filter: blur(20px);
+    padding: 20px;
     margin: 2%;
     border-radius: 20px;
     box-shadow: 0px 5px 12px 4px rgba(0, 0, 0, 0.372);
@@ -184,20 +213,19 @@ div.text-historia {
 
 section.historia > h1{
     font-family: var(--font-subtítulo);
-    color: var(--cor-título);
+    color: var(--fundo-claro);
     font-size: 3em;
-    padding: 20px;
+    padding: 0px 20px;
     margin-top: 20px;
     margin-left: 30px;
     text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.315);
-    justify-container: right;
     transition: .5s;
 }
 
 section.historia p{
     font-family: var(--font-texto);
-    color: var(--cor-título);
-    font-size: 1.5em;
+    color: #05183b;
+    font-size: 2em;
     padding: 20px;
 }
 
@@ -207,7 +235,7 @@ section.historia div.imagem {
 
 section.historia div.imagem img {
     border-radius: 20px;
-    margin-left: 20px ;
+    margin-left: 5px;
     box-shadow: 0px 5px 12px 4px rgba(0, 0, 0, 0.372);
 }
 
@@ -215,7 +243,7 @@ section#parallax {
     background-color: grey;
     background-image: url(imagens/Wolf\ __\ Witch\ Watch.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
 }
 
 section.wolf {
