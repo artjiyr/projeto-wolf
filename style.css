@@ -114,6 +114,7 @@ section#banner > h1 {
     font-family: var(--font-links);
     font-size: 5em;
     color: var(--fundo-claro);
+    text-shadow: 5px 2px 10px rgba(255, 255, 255, 0.347);
     grid-area: 3 / 2;
     align-content: end;
 }
@@ -122,7 +123,7 @@ section#banner > h2 {
     font-family: var(--font-links);
     font-size: 1.5em;
     color: var(--fundo-claro);
-
+    text-shadow: 5px 2px 10px rgba(255, 255, 255, 0.349);
      grid-area: 4 / 2;
     text-align: end;
     margin-right: 50%;
