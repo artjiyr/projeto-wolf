@@ -39,8 +39,7 @@ header.rolagem {
     background-size: cover;
     background-position: center top;
     padding: 5px 0px;
-    width: 100%;
-    header: 10%;
+    width: 100%;   
 }
 
 header.rolagem div#container > div.logo{
@@ -243,7 +242,7 @@ section#parallax {
     background-color: grey;
     background-image: url(imagens/Wolf\ __\ Witch\ Watch.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: right center;
 }
 
 section.wolf {
