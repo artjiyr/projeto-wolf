@@ -21,7 +21,27 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+}
+
+/* Altera a largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Altera a cor do fundo da barra de rolagem (trilha) */
+::-webkit-scrollbar-track {
+  background: var(--cor-título);
+}
+
+/* Altera a cor do polegar (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+  background: var(--fundo-claro);
+  border-radius: 5px;
+}
+
+/* Altera a cor do polegar ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 header{
