@@ -29,11 +29,11 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 
 header.rolagem {
-    background-image: linear-gradient(to left, var(--fundo-principal), var(--cor-link));
+    background-image: linear-gradient(45deg, var(--fundo-principal), var(--cor-link));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -214,8 +214,23 @@ section.historia div.imagem img {
 section#parallax {
     background-color: grey;
     background-image: url(imagens/Wolf\ __\ Witch\ Watch.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-section.parallax {
-    
+section.wolf {
+    background-color: rgba(90, 89, 89, 0.897);
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    line-height: 2em;
+    padding-left: 30px;
+}
+
+section#carrossel {
+    height: 100vh;
 }
