@@ -9,15 +9,15 @@
     --cor-name: rgb(4, 74, 178); 
 }
 
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: var(--texto);
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }
 
 header {
@@ -30,19 +30,16 @@ header {
     align-items: center;
     padding: 30px;
     position: fixed;
+    z-index: 9999;
 }
 
-.logo > img{
-    width: 100%;
-}
-
-nav#menu > ul.links{
+nav#menu > ul.links {
     display: flex;
-    list-style-type: none;
+    list-style: none;
     margin-left: 10%;
 }
 
-.links > li a{
+.links > li a {
     margin-right: 50px;
     font-family: var(--título);
     font-size: 1em;
@@ -59,35 +56,103 @@ nav#menu > ul.links{
 }
 
 main {
-    width: 1000px;
-    display: block;
+    width: 1300px;
+    height: 100vh;
     margin: auto;
     padding-top: 210px;
 }
-
-section#topo {
-    
-    grid-template-columns: 200px 400px;
-    grid-template-rows: 200px 300px;
-    display: grid;
-    margin-bottom: 20%;
+.slider {
+    width: 100%;
+    max-width: 1300px;
+    height: 800px; /* aumentei para suas imagens ficarem bonitas */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-h1.nome {
-    font-size: 1.5em;
-    font-weight: 700;
-    text-align: right;
-    color: var(--cor-name);
-    grid-area: 2 / 1;
-    text-shadow: 4px 4px 10px rgba(0, 140, 255, 0.566);
-    
+.slider .list {
+    display: flex;
+    height: 100%;
+    transition: .8s ease-in-out;
 }
 
-img.wolf-full-body {
-    width: 75%;
-    padding: 20px;
-    grid-area: 1 / 2;
+.slider .item {
+    min-width: 100%; /* ESSENCIAL! */
+    height: 100%;
 }
 
+.slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* qualidade máxima, estilo site oficial */
+}
+
+
+/* BOTÕES */
+.buttons{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 132);
+    color: white;
+    border: none;
+    font-family: var(--título);
+    font-weight: 900;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover{
+    transform: scale(1.1);
+}
+
+/* DOTS */
+.dots { 
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.dots li {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 2px solid rgb(255, 0, 132);
+    margin: 10px;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.dots li.active {
+    width: 35px;
+    border-radius: 20px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade.active {
+    opacity: 1;
+}
 
 
