@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+    --texto: "Roboto Slab", serif;
+    --título: "Merriweather", serif;
+    --cor-link: rgb(47, 47, 47);
+    --cor-link2: rgb(219, 21, 114);
+    --cor-name: rgb(4, 74, 178); 
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--texto);
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    width: 100%;
+    height: 180px;
+    background-color: rgba(255, 255, 255, 0.233);
+    backdrop-filter: blur(30px);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 30px;
+    position: fixed;
+}
+
+.logo > img{
+    width: 100%;
+}
+
+nav#menu > ul.links{
+    display: flex;
+    list-style-type: none;
+    margin-left: 10%;
+}
+
+.links > li a{
+    margin-right: 50px;
+    font-family: var(--título);
+    font-size: 1em;
+    color: var(--cor-link);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.links a:hover {
+    color: var(--cor-link2);
+    padding: 15px;
+    text-shadow: 2px 4px 20px rgb(255, 123, 184);
+}
+
+main {
+    width: 1000px;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+
+section#topo {
+    
+    grid-template-columns: 200px 400px;
+    grid-template-rows: 200px 300px;
+    display: grid;
+    margin-bottom: 20%;
+}
+
+h1.nome {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: right;
+    color: var(--cor-name);
+    grid-area: 2 / 1;
+    text-shadow: 4px 4px 10px rgba(0, 140, 255, 0.566);
+    
+}
+
+img.wolf-full-body {
+    width: 75%;
+    padding: 20px;
+    grid-area: 1 / 2;
+}
+
+
+
