@@ -45,7 +45,7 @@ dots.forEach((dot, index) => {
 window.addEventListener("resize", reloadSlider);
 
 // autoplay
-setInterval(() => next.click(), 8000);
+setInterval(() => next.click(), 7000);
 
 // iniciar
 reloadSlider();

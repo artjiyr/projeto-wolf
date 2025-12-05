@@ -22,11 +22,12 @@ body {
 
 header {
     width: 100%;
-    height: 180px;
+    height: 185px;
     background-color: rgba(255, 255, 255, 0.233);
     backdrop-filter: blur(30px);
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
     padding: 30px;
     position: fixed;
@@ -36,13 +37,15 @@ header {
 nav#menu > ul.links {
     display: flex;
     list-style: none;
-    margin-left: 10%;
+    margin: auto;
+    margin-top: 15px;
 }
 
 .links > li a {
+    
     margin-right: 50px;
     font-family: var(--título);
-    font-size: 1em;
+    font-size: 1.2em;
     color: var(--cor-link);
     font-weight: 700;
     text-decoration: none;
@@ -53,6 +56,10 @@ nav#menu > ul.links {
     color: var(--cor-link2);
     padding: 15px;
     text-shadow: 2px 4px 20px rgb(255, 123, 184);
+}
+
+.logo img{
+    width: 100%;
 }
 
 main {
@@ -74,6 +81,7 @@ main {
 
 .slider .list {
     display: flex;
+    width: 100%;
     height: 100%;
     transition: .8s ease-in-out;
 }
@@ -86,7 +94,7 @@ main {
 .slider .item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* qualidade máxima, estilo site oficial */
+    object-fit: cover; 
 }
 
 
@@ -163,3 +171,40 @@ main {
 }
 
 
+/* Bem Vindos */
+
+section#bem-vindos {
+    height: auto;
+    padding: 20px;
+
+}
+
+section#bem-vindos > div.container h1{
+    text-align: center;
+    padding: 30px;
+    font-size: 3em;
+    color: var(--cor-link2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+div.container h1:hover {
+    transform: scale(1.4);
+}
+
+div.imagem-container{
+    display: flex;
+}
+
+.texto-1{
+    display: block;
+    margin: auto;
+}
+
+.imagem-container p {
+    width: 350px;
+    font-size: 1.4em;
+    color: var(--cor-link2);
+    border-radius: 20px;
+    padding: 20px;
+}
