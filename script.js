@@ -7,7 +7,7 @@ const dots = document.querySelectorAll('.slider .dots li');
 let active = 0;
 let max = items.length - 1;
 
-// Função principal do slider
+// --- SLIDER ---
 function reloadSlider() {
 
     // mover slider
@@ -33,7 +33,7 @@ prev.onclick = () => {
     reloadSlider();
 }
 
-// controle pelos dots
+// dots
 dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
         active = index;
@@ -49,3 +49,18 @@ setInterval(() => next.click(), 7000);
 
 // iniciar
 reloadSlider();
+
+
+// --- BACKGROUND FADE-IN AOS 55% DO SCROLL ---
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    if (scrollPercent >= 40) {
+        document.body.classList.add('bg-visible');
+    } else {
+        document.body.classList.remove('bg-visible');
+    }
+});
