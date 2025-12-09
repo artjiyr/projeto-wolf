@@ -38,7 +38,7 @@ body::before {
     background-size: cover;
 
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity .8s ease-in-out;
 
     z-index: -1;
 }
@@ -93,7 +93,7 @@ main {
     width: 1000px;
     height: 100vh;
     margin: auto;
-    padding-top: 210px;
+    padding-top: 250px;
     background-color: white;
 }
 
@@ -211,24 +211,35 @@ article {
 section#bem-vindos {
     height: auto;
     padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; 
+}
 
+div.container {
+    
 }
 
 section#bem-vindos > div.container h1{
+    width: 100vw;
     text-align: center;
+    margin-top: 140px;
     padding: 30px;
     font-size: 3em;
-    color: var(--cor-link2);
+    background-color: var(--cor-link2);
+    color: white;
     cursor: pointer;
     transition: 0.5s;
     text-shadow: 0px 0px 5px rgba(229, 101, 152, 0.712);
 }
 
 div.container h1:hover {
-    transform: scale(1.4);
+    transform: scale(1.1);
+    backdrop-filter: blur(30px);
 }
 
 div.imagem-container{
+    margin-top: 20px;
     display: flex;
 }
 
@@ -281,9 +292,14 @@ div.imagem-container{
 /* Sobre */
 
 section#sobre h1{
-    padding: 20px;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 15px;
     margin-top: 10px;
-    color: var(--cor-name);
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: var(--cor-name);
+    color: white;
 }
 
 section#sobre p {
@@ -309,11 +325,12 @@ div.sobre div.imagem-sobre img {
 
 #personalidade {
     padding: 20px;
-    margin-top: 70px;
-    background-color: var(--cor-name);
+    margin-top: 30px;
+    background-color: var(--cor-link2);
     border-radius: 20px;
     color: var(--cor-link2);
     display: flex;
+    box-shadow: 0px 0px 20px var(--cor-link2);
 }
 
 div.texto-person {
@@ -321,19 +338,35 @@ div.texto-person {
     backdrop-filter: blur(20px);
     padding: 20px;
     border-radius: 15px 0px 0px 15px;
+    
 }
 
 #sessao-person h1{
-    font-size: 3em;
+    font-size: 1.5em;
     font-weight: 700;
-    padding: 0px;
+    padding: 15px;
     margin-bottom: 0px;
-    margin-top: 70px
+    margin-top: 70px;
+    background-color: var(--cor-link2);
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    
 }
 
 .texto-person p{
-    font-size: 1.2em;
-    padding: 5px;
+    font-size: 1em;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 15px;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.196);
+    transition: 0.5s;
+}
+
+.texto-person p:hover {
+    transition: .5s;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
 .imagem-person {
@@ -358,5 +391,4 @@ div.texto-person {
     opacity: 0.5;
     background-color: var(--cor-name);
     box-shadow: 0px 7px 20px var(--cor-name);
-   
 }

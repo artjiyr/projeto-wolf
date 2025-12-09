@@ -51,14 +51,14 @@ setInterval(() => next.click(), 7000);
 reloadSlider();
 
 
-// --- BACKGROUND FADE-IN AOS 55% DO SCROLL ---
+// --- BACKGROUND FADE-IN DO SCROLL ---
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const docHeight = document.body.scrollHeight - window.innerHeight;
 
     const scrollPercent = (scrollTop / docHeight) * 100;
 
-    if (scrollPercent >= 40) {
+    if (scrollPercent >= 55) {
         document.body.classList.add('bg-visible');
     } else {
         document.body.classList.remove('bg-visible');
