@@ -136,7 +136,7 @@ article {
 /* BOTÕES */
 .buttons{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 0;
     width: 100%;
     display: flex;
@@ -283,6 +283,13 @@ div.imagem-container{
 section#sobre h1{
     padding: 20px;
     margin-top: 10px;
+    color: var(--cor-name);
+}
+
+section#sobre p {
+    font-size: 1.5em;
+    padding: 15px;
+    color: var(--cor-name);
 
 }
 
@@ -295,4 +302,61 @@ div.sobre div.imagem-sobre img {
     height: 600px;
     border-radius: 10px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.295);
+}
+
+
+/* Personalidade */ 
+
+#personalidade {
+    padding: 20px;
+    margin-top: 70px;
+    background-color: var(--cor-name);
+    border-radius: 20px;
+    color: var(--cor-link2);
+    display: flex;
+}
+
+div.texto-person {
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+#sessao-person h1{
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 70px
+}
+
+.texto-person p{
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.imagem-person {
+     padding: 20px;
+     background-color: rgb(255, 255, 255);
+     border-radius: 0px 15px 15px 0px;
+}
+
+.imagem-person img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--cor-link2);
+    border: 15px solid white;
+    transition: 0.8s;
+    box-shadow: 0px 5px 15px var(--cor-link2);
+}
+
+.imagem-person img:hover {
+    transition: 0.5s;
+    filter: blur(0px) brightness(1) saturate(10);
+    opacity: 0.5;
+    background-color: var(--cor-name);
+    box-shadow: 0px 7px 20px var(--cor-name);
+   
 }
