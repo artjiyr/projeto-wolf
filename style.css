@@ -411,20 +411,72 @@ div.texto-person {
 
 section#habilidades{
     width: 100%;
-    height: 50vh;
+    height: 55vh;
     background-image: url(imagens/keigo-wolf-ww12.avif);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
+    filter: contrast(110%) saturate(1.5);
 }
 
 section#habilidades h1{
     color: aliceblue;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
-    background-color: rgba(255, 255, 255, 0.374);
-    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.429);
+    backdrop-filter: blur(2px);
     border: 1px solid white;
     border-radius: 20px;
     display: inline-block;
+}
+
+#container-habilidades {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+#container-habilidades .item {
+    background-color: rgba(255, 255, 255, 0.308);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+    width: 300px;
+}
+
+#container-habilidades .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container-habilidades .nome {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+}
+
+#container-habilidades .porcent {
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#container-habilidades .barra {
+    width: 100%;
+    height: 8px;
+    background-color: var(--cor-name);
+    border-radius: 6px;
+}
+
+#container-habilidades .progresso {
+    height: 100%;
+    background-image: linear-gradient(to left, var(--cor-link2),white,  var(--cor-name));
+    border-radius: 4px;
+    transition-duration: .5s;
+}
+
+aside#curiosidades {
+    height: 100vw;
 }
