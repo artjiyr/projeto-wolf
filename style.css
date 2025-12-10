@@ -47,15 +47,19 @@ body::before {
     opacity: 1;
 }
 
+div#parallax-1 {
+    width: 100vw;
+}
+
 header {
     width: 100%;
-    height: 185px;
+    height: 100px;
     background-color: rgba(255, 255, 255, 0.664);
     backdrop-filter: blur(30px);
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-content: center;
     padding: 30px;
     position: fixed;
     z-index: 9999;
@@ -65,7 +69,7 @@ nav#menu > ul.links {
     display: flex;
     list-style: none;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 7%;
 }
 
 .links > li a {
@@ -81,12 +85,20 @@ nav#menu > ul.links {
 
 .links a:hover {
     color: var(--cor-link2);
-    padding: 15px;
+    padding: 0px 15px 0px 15px;
     text-shadow: 2px 4px 20px rgb(255, 123, 184);
 }
 
 .logo img{
-    width: 100%;
+    width: 50%;
+    padding: 10px;
+    transition: .5s;
+}
+
+.logo img:hover {
+    transition: .5s;
+    opacity: 0.5;
+    transform: scale(1.1);
 }
 
 main {
@@ -103,10 +115,12 @@ article {
     padding: 20px;
 }
 
+
+
 .slider {
     width: 100%;
     max-width: 1000px;
-    height: 500px; /* aumentei para suas imagens ficarem bonitas */
+    height: 500px;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -122,7 +136,7 @@ article {
 }
 
 .slider .item {
-    min-width: 100%; /* ESSENCIAL! */
+    min-width: 100%;
     height: 100%;
 }
 
@@ -186,7 +200,7 @@ article {
     border: 2px solid rgb(255, 0, 132);
     margin: 10px;
     border-radius: 50%;
-    transition: .3s;
+    transition: .5s;
     cursor: pointer;
     box-shadow: 1px 2px 10px white;
 }
@@ -194,6 +208,7 @@ article {
 .dots li.active {
     width: 35px;
     border-radius: 20px;
+    transition: .3s;
 }
 
 .fade {
@@ -326,6 +341,7 @@ div.sobre div.imagem-sobre img {
 #personalidade {
     padding: 20px;
     margin-top: 30px;
+    margin-bottom: 30px;
     background-color: var(--cor-link2);
     border-radius: 20px;
     color: var(--cor-link2);
@@ -365,7 +381,7 @@ div.texto-person {
 
 .texto-person p:hover {
     transition: .5s;
-    padding: 15px;
+    transform: scale(1.1);
     margin-bottom: 15px;
 }
 
@@ -391,4 +407,24 @@ div.texto-person {
     opacity: 0.5;
     background-color: var(--cor-name);
     box-shadow: 0px 7px 20px var(--cor-name);
+}
+
+section#habilidades{
+    width: 100%;
+    height: 50vh;
+    background-image: url(imagens/keigo-wolf-ww12.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+section#habilidades h1{
+    color: aliceblue;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.374);
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+    border-radius: 20px;
+    display: inline-block;
 }
