@@ -444,6 +444,14 @@ section#habilidades h1{
     border-radius: 15px;
     border: 1px solid white;
     width: 300px;
+    transition: .5s;
+}
+
+#container-habilidades div.item:hover {
+    width: 900px;
+    margin-left: 15px;
+    transform: scale(1);
+    transition: .8s;
 }
 
 #container-habilidades .info {
