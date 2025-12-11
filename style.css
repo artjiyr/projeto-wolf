@@ -116,7 +116,7 @@ article {
 }
 
 
-
+/* Slide */
 .slider {
     width: 100%;
     max-width: 1000px;
@@ -231,10 +231,6 @@ section#bem-vindos {
     align-items: center; 
 }
 
-div.container {
-    
-}
-
 section#bem-vindos > div.container h1{
     width: 100vw;
     text-align: center;
@@ -260,10 +256,56 @@ div.imagem-container{
 
 .texto-1{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-content: center;
     gap: 20px;
-    
+}
+
+.texto-1 strong{
+    font-size: 1.5em;
+    font-weight: 700;
+    position: relative;
+}
+
+.texto-1 strong::before {
+    content: "";
+    color: var(--cor-name);
+    animation: palavras 6s infinite;
+}
+
+.texto-1 strong::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid var(--cor-link2);
+    right: -10px;
+    animation: cursor .5s infinite, digita 15s steps(15) infinite;
+    width: calc(100% + 12px);
+    background-color: white;
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 12px);
+    }
+}
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid white;
+    }
+}
+
+@keyframes palavras {
+    0%,50%{
+        content: "Wolf Kumon.";
+    }
+    51%,100%{
+        content: "Keigo Magami.";
+    }
 }
 
 .imagem-container p {
@@ -409,6 +451,8 @@ div.texto-person {
     box-shadow: 0px 7px 20px var(--cor-name);
 }
 
+/* Habilidades */
+
 section#habilidades{
     width: 100%;
     height: 55vh;
@@ -486,5 +530,107 @@ section#habilidades h1{
 }
 
 aside#curiosidades {
-    height: 100vw;
+    margin-top: 150px;
+    height: auto;
+    padding: 15px;
+    background-color: var(--cor-name);
+    color: white;
+    border-radius: 15px;
+}
+
+aside#curiosidades h1 {
+    background-color: white;
+    color: var(--cor-name);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.397);
+}
+
+div#imagens-gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 250px);
+    justify-items: end;
+    align-items: center;
+    gap: 25px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.397);
+}
+
+div.imagem1 {
+    grid-area: 1 / 1 / 2 / 2;
+    
+}
+
+div.imagem1 img {
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.432);
+}
+
+div.imagem2 {
+    grid-area: 1 / 2 / 4 / 3;
+}
+
+div.imagem2 img{
+    width: 87%;
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.432);
+}
+
+div.imagem3 img {
+    width: 60%;
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.432);
+}
+
+div#imagens-gallery img{
+    transition: .5s;
+}
+
+div#imagens-gallery img:hover {
+    transition: .8s;
+    transform: scale(1.1);
+}
+
+div.curiosidades-text {
+    padding: 20px;
+    margin: 20px;
+}
+
+div.bloco {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.192);
+    border-radius: 20px;
+    box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.406);
+    padding: 20px;
+
+}
+
+div.curiosidades-text h2 {
+    font-size: 1.6em;
+    padding: 8px;
+}
+
+div.curiosidades-text p {
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: justify;
+}
+
+div.curiosidades-text ul{
+    font-size: 1.1em;
+    padding: 20px;
+}
+
+div.curiosidades-text li{ 
+    padding: 10px;
 }

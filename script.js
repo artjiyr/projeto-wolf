@@ -58,7 +58,7 @@ window.addEventListener('scroll', () => {
 
     const scrollPercent = (scrollTop / docHeight) * 100;
 
-    if (scrollPercent >= 55) {
+    if (scrollPercent >= 30) {
         document.body.classList.add('bg-visible');
     } else {
         document.body.classList.remove('bg-visible');
